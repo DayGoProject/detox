@@ -2,8 +2,14 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function MenuPages({ page, onBack }) {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const [leaderboardTab, setLeaderboardTab] = useState('local');
+    const [notificationsOn, setNotificationsOn] = useState(true);
+    const [strictModeOn, setStrictModeOn] = useState(false);
+
+    const toggleLanguage = () => {
+        i18n.changeLanguage(i18n.language === 'en' ? 'ko' : 'en');
+    };
 
     const Header = ({ title }) => (
         <div className="px-6 pt-12 pb-6 border-b-2 border-ink-black bg-white sticky top-0 z-10 flex items-center gap-4">
@@ -19,20 +25,31 @@ export default function MenuPages({ page, onBack }) {
             <div className="bg-off-white text-ink-black min-h-screen flex flex-col pb-16">
                 <Header title={t('menuPages.settings.title')} />
                 <div className="p-6 space-y-4">
-                    <div className="border-2 border-ink-black bg-white p-4 flex justify-between items-center group cursor-pointer hover:bg-amber-50">
+                    <div
+                        onClick={toggleLanguage}
+                        className="border-2 border-ink-black bg-white p-4 flex justify-between items-center group cursor-pointer hover:bg-amber-50"
+                    >
                         <span className="font-bold">{t('menuPages.settings.language')}</span>
-                        <span className="text-stone-gray material-symbols-outlined group-hover:text-amber-accent">arrow_forward_ios</span>
+                        <span className="font-mono font-bold text-amber-600 bg-amber-100 px-2 py-1 border border-amber-600">
+                            {i18n.language === 'ko' ? '한국어 (KR)' : 'English (EN)'}
+                        </span>
                     </div>
-                    <div className="border-2 border-ink-black bg-white p-4 flex justify-between items-center group cursor-pointer hover:bg-amber-50">
+                    <div
+                        onClick={() => setNotificationsOn(!notificationsOn)}
+                        className="border-2 border-ink-black bg-white p-4 flex justify-between items-center group cursor-pointer hover:bg-amber-50"
+                    >
                         <span className="font-bold">{t('menuPages.settings.notifications')}</span>
-                        <div className="w-12 h-6 bg-green-500 rounded-full relative">
-                            <div className="absolute right-1 top-1 size-4 bg-white rounded-full"></div>
+                        <div className={`w-12 h-6 rounded-full relative transition-colors ${notificationsOn ? 'bg-green-500' : 'bg-gray-300'}`}>
+                            <div className={`absolute top-1 size-4 bg-white rounded-full transition-all ${notificationsOn ? 'right-1' : 'left-1'}`}></div>
                         </div>
                     </div>
-                    <div className="border-2 border-ink-black bg-white p-4 flex justify-between items-center group cursor-pointer hover:bg-amber-50">
+                    <div
+                        onClick={() => setStrictModeOn(!strictModeOn)}
+                        className="border-2 border-ink-black bg-white p-4 flex justify-between items-center group cursor-pointer hover:bg-amber-50"
+                    >
                         <span className="font-bold text-red-600">{t('menuPages.settings.strictMode')}</span>
-                        <div className="w-12 h-6 bg-gray-300 rounded-full relative">
-                            <div className="absolute left-1 top-1 size-4 bg-white rounded-full"></div>
+                        <div className={`w-12 h-6 rounded-full relative transition-colors ${strictModeOn ? 'bg-red-500' : 'bg-gray-300'}`}>
+                            <div className={`absolute top-1 size-4 bg-white rounded-full transition-all ${strictModeOn ? 'right-1' : 'left-1'}`}></div>
                         </div>
                     </div>
                     <div className="border-2 border-ink-black bg-white p-4 flex justify-between items-center group cursor-pointer hover:bg-amber-50 mt-8">

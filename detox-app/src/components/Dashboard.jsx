@@ -2,11 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function Dashboard({ onNavigateToQuests, onOpenMenu }) {
-    const { t, i18n } = useTranslation();
-
-    const toggleLanguage = () => {
-        i18n.changeLanguage(i18n.language === 'en' ? 'ko' : 'en');
-    };
+    const { t } = useTranslation();
 
     return (
         <div className="bg-off-white text-ink-black min-h-screen flex flex-col overflow-hidden relative selection:bg-amber-accent selection:text-white pb-16">
@@ -19,12 +15,6 @@ export default function Dashboard({ onNavigateToQuests, onOpenMenu }) {
                         {t('app.title')}<span className="text-amber-accent">.</span>
                     </h2>
                     <div className="flex items-center gap-2">
-                        <button
-                            onClick={toggleLanguage}
-                            className="text-xs font-bold border-2 border-ink-black px-2 py-1 hover:bg-ink-black hover:text-white transition-colors"
-                        >
-                            {i18n.language === 'ko' ? 'EN' : 'KR'}
-                        </button>
                         <button className="flex size-10 items-center justify-center relative border-2 border-transparent hover:border-ink-black transition-all">
                             <span className="material-symbols-outlined text-[28px]">notifications</span>
                             <span className="absolute top-2 right-2 w-2 h-2 bg-amber-accent"></span>
