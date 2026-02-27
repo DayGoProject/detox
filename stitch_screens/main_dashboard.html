@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Modern Kinetic Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "amber-accent": "#D97706",
+                        "amber-dark": "#B45309",
+                        "off-white": "#F9FAFB",
+                        "ink-black": "#111827",
+                        "stone-gray": "#4B5563",
+                        "border-gray": "#E5E7EB",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0px", "sm": "2px", "md": "4px", "lg": "0px", "xl": "0px", "2xl": "0px", "full": "9999px" },
+                    boxShadow: {
+                        'kinetic': '4px 4px 0px 0px #111827',
+                        'kinetic-sm': '2px 2px 0px 0px #111827',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }.pattern-grid {
+            background-image: radial-gradient(#D97706 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-off-white text-ink-black min-h-screen flex flex-col overflow-hidden relative selection:bg-amber-accent selection:text-white">
+<main class="flex-1 overflow-y-auto scrollbar-hide pb-24">
+<div class="flex items-center px-6 pt-12 pb-6 justify-between border-b border-ink-black sticky top-0 z-20 bg-off-white/95 backdrop-blur-sm">
+<button class="text-ink-black flex size-10 items-center justify-center border-2 border-transparent hover:border-ink-black transition-all">
+<span class="material-symbols-outlined text-[32px] font-light">menu</span>
+</button>
+<h2 class="text-ink-black text-xl font-display font-bold uppercase tracking-widest">Kinetic<span class="text-amber-accent">.</span></h2>
+<button class="flex size-10 items-center justify-center relative border-2 border-transparent hover:border-ink-black transition-all">
+<span class="material-symbols-outlined text-[28px]">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-amber-accent"></span>
+</button>
+</div>
+<div class="px-6 py-10 border-b border-ink-black">
+<div class="flex justify-between items-end mb-2">
+<span class="font-display font-bold uppercase text-xs tracking-[0.2em] text-stone-gray">Detox Timer</span>
+<div class="flex items-center gap-1 text-amber-accent animate-pulse">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span class="text-xs font-bold uppercase tracking-wider">Live</span>
+</div>
+</div>
+<div class="flex flex-col items-start leading-none">
+<div class="flex items-baseline gap-1">
+<span class="text-[7rem] font-display font-bold text-ink-black tracking-tighter leading-none">02</span>
+<span class="text-2xl font-bold text-stone-gray mb-4">h</span>
+</div>
+<div class="flex items-baseline w-full justify-between border-t-2 border-ink-black pt-2 mt-2">
+<div class="flex items-baseline gap-1">
+<span class="text-[4rem] font-display font-bold text-amber-accent tracking-tighter">45</span>
+<span class="text-lg font-bold text-stone-gray">m</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="text-[4rem] font-display font-bold text-ink-black tracking-tighter">12</span>
+<span class="text-lg font-bold text-stone-gray">s</span>
+</div>
+</div>
+</div>
+</div>
+<div class="px-6 py-8 border-b border-ink-black bg-white">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-display text-xl font-bold uppercase">The Guardian</h3>
+<span class="px-2 py-1 bg-ink-black text-white text-xs font-bold uppercase">Lvl 05</span>
+</div>
+<div class="relative w-full aspect-[2/1] border-2 border-ink-black bg-off-white overflow-hidden shadow-kinetic group">
+<div class="absolute inset-0 pattern-grid opacity-20"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="relative size-24 border-2 border-ink-black bg-white flex items-center justify-center rotate-45 transition-transform duration-700 group-hover:rotate-90">
+<div class="absolute inset-2 border border-amber-accent bg-amber-accent/10"></div>
+<div class="size-8 bg-ink-black"></div>
+</div>
+<div class="absolute w-48 h-48 border border-dashed border-stone-gray rounded-full animate-[spin_10s_linear_infinite]"></div>
+<div class="absolute w-64 h-64 border border-stone-gray opacity-30 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
+</div>
+<div class="absolute bottom-0 left-0 w-full bg-white/90 border-t-2 border-ink-black p-3 backdrop-blur-sm flex justify-between items-center">
+<div>
+<p class="font-display font-bold text-sm uppercase">Evolution Status</p>
+<p class="text-xs text-stone-gray font-mono">Stabilizing neural link...</p>
+</div>
+<div class="h-2 w-24 bg-gray-200 border border-ink-black">
+<div class="h-full bg-amber-accent w-[68%]"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 divide-x divide-ink-black border-b border-ink-black bg-white">
+<div class="p-6 flex flex-col justify-between h-40 group hover:bg-amber-50 transition-colors">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-3xl text-ink-black">smartphone</span>
+<span class="text-xs font-bold text-amber-accent bg-amber-100 px-1 py-0.5 border border-amber-accent">+12%</span>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase text-stone-gray tracking-wider mb-1">Focus Time</h4>
+<p class="text-3xl font-display font-bold text-ink-black group-hover:translate-x-1 transition-transform">4h 20m</p>
+</div>
+</div>
+<div class="p-6 flex flex-col justify-between h-40 group hover:bg-amber-50 transition-colors">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-3xl text-ink-black">map</span>
+<span class="text-xs font-bold text-ink-black border border-ink-black px-1 py-0.5">3/5</span>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase text-stone-gray tracking-wider mb-1">Active Quests</h4>
+<p class="text-3xl font-display font-bold text-ink-black group-hover:translate-x-1 transition-transform">03</p>
+</div>
+</div>
+</div>
+<div class="px-6 py-8">
+<h3 class="font-display text-xl font-bold uppercase mb-6 flex items-center gap-2">
+<span class="w-3 h-3 bg-amber-accent"></span>
+                Current Objective
+            </h3>
+<div class="border-2 border-ink-black bg-white p-5 shadow-kinetic flex items-center gap-5 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all cursor-pointer">
+<div class="size-14 border-2 border-ink-black bg-off-white flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-amber-accent text-[28px]">water_drop</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-ink-black font-display font-bold text-lg leading-tight">Hydration Station</h4>
+<p class="text-stone-gray text-sm mt-1 font-mono">Target: 500ml H2O intake</p>
+</div>
+<button class="size-10 border-2 border-ink-black bg-ink-black text-white hover:bg-amber-accent hover:text-ink-black transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</button>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 w-full bg-white border-t-2 border-ink-black z-50 pb-safe">
+<div class="flex justify-between items-stretch h-16">
+<a class="flex-1 flex flex-col items-center justify-center gap-1 hover:bg-gray-50 border-r border-ink-black group" href="#">
+<span class="material-symbols-outlined text-[24px] text-stone-gray group-hover:text-ink-black transition-colors">home</span>
+</a>
+<a class="flex-1 flex flex-col items-center justify-center gap-1 hover:bg-gray-50 border-r border-ink-black group" href="#">
+<span class="material-symbols-outlined text-[24px] text-stone-gray group-hover:text-ink-black transition-colors">map</span>
+</a>
+<div class="w-20 relative">
+<button class="absolute -top-6 left-1/2 -translate-x-1/2 size-14 bg-amber-accent border-2 border-ink-black shadow-kinetic flex items-center justify-center hover:translate-y-1 hover:shadow-kinetic-sm transition-all text-ink-black">
+<span class="material-symbols-outlined text-[28px] font-bold">spa</span>
+</button>
+</div>
+<a class="flex-1 flex flex-col items-center justify-center gap-1 hover:bg-gray-50 border-r border-ink-black border-l group" href="#">
+<span class="material-symbols-outlined text-[24px] text-stone-gray group-hover:text-ink-black transition-colors">forest</span>
+</a>
+<a class="flex-1 flex flex-col items-center justify-center gap-1 hover:bg-gray-50 group" href="#">
+<span class="material-symbols-outlined text-[24px] text-stone-gray group-hover:text-ink-black transition-colors">person</span>
+</a>
+</div>
+<div class="h-6 bg-white w-full"></div>
+</nav>
+<style>
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+
+</body></html>

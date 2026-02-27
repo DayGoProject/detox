@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Action-Driven Quest Interface</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D97706",
+                        "background-light": "#ffffff",
+                        "background-dark": "#0a0a0a",
+                        "surface-dark": "#171717",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #333;
+            border-radius: 20px;
+        }
+        .text-stroke-number {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+            color: transparent;
+        }
+        .light .text-stroke-number {
+            -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
+            color: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased min-h-screen flex flex-col selection:bg-primary selection:text-white">
+<div class="px-6 pt-6 pb-2 flex justify-between items-end sticky top-0 z-20 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-xl border-b border-slate-100 dark:border-white/5">
+<div>
+<p class="text-xs font-bold tracking-widest uppercase text-primary mb-1">Dopamine Detox</p>
+<h1 class="text-2xl font-bold tracking-tight">Select Action</h1>
+</div>
+<button class="size-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-surface-dark hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto">
+<div class="px-6 pt-8 pb-8">
+<h2 class="text-4xl sm:text-5xl font-extrabold tracking-tighter leading-[0.9] mb-6">
+                EARN YOUR <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-amber-400">UNLOCK</span>
+</h2>
+<p class="text-lg leading-relaxed text-slate-600 dark:text-slate-400 font-light border-l-2 border-primary pl-4">
+                The digital world can wait. Reconnect with your body to break the loop. Choose a physical challenge to proceed.
+            </p>
+</div>
+<div class="flex flex-col">
+<div class="relative w-full border-t border-slate-200 dark:border-white/10 group">
+<div class="absolute inset-0 bg-slate-50 dark:bg-white/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="relative px-6 py-8 flex items-start gap-6">
+<span class="text-6xl font-black text-stroke-number italic leading-none opacity-50 select-none">01</span>
+<div class="flex-1 min-w-0 pt-1">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold tracking-widest uppercase text-slate-400 dark:text-slate-500">Nature</span>
+<span class="inline-flex items-center gap-1 text-xs font-bold text-amber-500 bg-amber-500/10 px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[14px] fill-1">bolt</span> 50 XP
+                            </span>
+</div>
+<h3 class="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">Touch Grass</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 max-w-sm leading-relaxed">
+                            Step outside. Locate greenery. Capture a photo. Prove you exist in the real world.
+                        </p>
+<div class="flex items-center gap-4">
+<button class="bg-primary hover:bg-amber-500 text-white px-6 py-3 rounded-none text-sm font-bold uppercase tracking-wider transition-all active:scale-95 flex items-center gap-2">
+<span>Begin</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+<div class="h-12 w-20 bg-slate-200 dark:bg-surface-dark overflow-hidden grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
+<img alt="Nature" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy81F0c9kwlOqKlr_JRPgl397lm4OjrSnzfMd9Sg9F9cG3yAZveah9r1YRXdwXWI5vP9HdGauqBXqQ2H9-trYW_NaQXS5aaTxwreOTTLQZEuus5wVkJkxwPciYz0DixVY1IAgnxG0NOcNOM-56KxIDp4pSobpSDDUgmqYD6T-x9tSKwv3-sRJ5GuPX5-KkFZFKx276RljW_74RZJhFpOxvTDIHuc7_zSV0WdWO1qJy8DbIq0GNR78PEvhLKJ8VBLrtFx-pWZV2jGo"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative w-full border-t border-slate-200 dark:border-white/10 group">
+<div class="absolute inset-0 bg-slate-50 dark:bg-white/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="relative px-6 py-8 flex items-start gap-6">
+<span class="text-6xl font-black text-stroke-number italic leading-none opacity-50 select-none">02</span>
+<div class="flex-1 min-w-0 pt-1">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold tracking-widest uppercase text-slate-400 dark:text-slate-500">Endurance</span>
+<span class="inline-flex items-center gap-1 text-xs font-bold text-amber-500 bg-amber-500/10 px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[14px] fill-1">bolt</span> 120 XP
+                            </span>
+</div>
+<h3 class="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">15 Min Walk</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 max-w-sm leading-relaxed">
+                            GPS enabled. Consistent movement required. Clear your head and burn the cortisol.
+                        </p>
+<div class="flex items-center gap-4">
+<button class="bg-primary hover:bg-amber-500 text-white px-6 py-3 rounded-none text-sm font-bold uppercase tracking-wider transition-all active:scale-95 flex items-center gap-2">
+<span>Begin</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+<div class="h-12 w-20 bg-slate-200 dark:bg-surface-dark overflow-hidden grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
+<img alt="Walking" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnbcfTh0ky9EmWVHNqduDR1BgdE34kWHlfmGGmPMaCNEOnCF1UX76BASld5R_6ipi5vKpbU7HX6l4BycFUy6Fe5VzKDwaNHanAV4Cgaf_OVKVARR2IKMnP5O249k6y7fJ2-eU6JoMJjSKLEjzbrUctxyF_WaOI46bD_A1WVPv0R-ir8i0PtDfllKmK0FOWYMi26WuRmNqq1umIeJLsbhe-5MCBUvNf-zPgsBnlJgCz622L8s4MLfXeZIJJSh-KbjoJhyW_8efVbvk"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative w-full border-t border-b border-slate-200 dark:border-white/10 group">
+<div class="absolute inset-0 bg-slate-50 dark:bg-white/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="relative px-6 py-8 flex items-start gap-6">
+<span class="text-6xl font-black text-stroke-number italic leading-none opacity-50 select-none">03</span>
+<div class="flex-1 min-w-0 pt-1">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold tracking-widest uppercase text-slate-400 dark:text-slate-500">Strength</span>
+<span class="inline-flex items-center gap-1 text-xs font-bold text-amber-500 bg-amber-500/10 px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[14px] fill-1">bolt</span> 75 XP
+                            </span>
+</div>
+<h3 class="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">20 Squats</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 max-w-sm leading-relaxed">
+                            Immediate action. Device accelerometer active. Feel the burn, earn the scroll.
+                        </p>
+<div class="flex items-center gap-4">
+<button class="bg-primary hover:bg-amber-500 text-white px-6 py-3 rounded-none text-sm font-bold uppercase tracking-wider transition-all active:scale-95 flex items-center gap-2">
+<span>Begin</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+<div class="h-12 w-20 bg-slate-200 dark:bg-surface-dark overflow-hidden grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
+<img alt="Squats" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0_GJZ41UBScPOA3YFlmSJ-ql3O8v5qOaCarExnW74aSIOujqAEnrTK8VNjsEnZOgzseGq-t0h2zYRJ9046Pm56qhD0BIfdfrokE9oOX173WEgIQh06njEaNPtmtW_vMBZ8qFi2_RB92CpJT9hOPTh3WB0rvJ0E6TSqDZO_ts7Tx3d_2yVc6xgNCzwwBZ3xo4uexrlrPYyNI6pnI5ORNIY4SBFZiXSj8RN80IkyK1yODr5c9RIVTxberk39BWohIj1558_6_cdufY"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 mb-8 px-6 text-center">
+<p class="text-xs uppercase tracking-widest text-slate-400 dark:text-slate-600 mb-4">Or wait for dopamine reset</p>
+<div class="inline-flex items-center justify-center gap-3 px-6 py-3 border border-slate-200 dark:border-white/10 bg-white dark:bg-surface-dark w-full max-w-xs mx-auto">
+<span class="material-symbols-outlined text-slate-400 animate-pulse">timer</span>
+<span class="font-mono text-xl font-bold tracking-widest">04:59</span>
+</div>
+</div>
+</div>
+
+</body></html>
