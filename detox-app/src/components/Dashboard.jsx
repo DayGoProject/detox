@@ -116,6 +116,38 @@ export default function Dashboard({ onNavigateToQuests, onOpenMenu }) {
                     </div>
                 </div>
 
+                {/* Premium Challenge Section (Deposit & Reward) */}
+                <div className="px-6 py-8 border-b border-ink-black bg-off-white">
+                    <div className="flex justify-between items-center mb-4">
+                        <h3 className="font-display text-xl font-bold uppercase flex items-center gap-2 text-ink-black">
+                            <span className="material-symbols-outlined text-amber-accent">stars</span>
+                            Premium Challenge
+                        </h3>
+                        <span className="px-2 py-1 bg-amber-accent text-ink-black text-[10px] font-bold uppercase tracking-widest border border-ink-black animate-pulse">Live</span>
+                    </div>
+                    <div className="border-2 border-ink-black bg-white p-5 shadow-kinetic relative group overflow-hidden">
+                        <div className="absolute top-0 right-0 w-16 h-16 bg-amber-100 rounded-bl-full -z-0"></div>
+                        <h4 className="font-display font-bold text-lg leading-tight uppercase relative z-10">{t('monetization.premiumChallengeTitle')}</h4>
+                        <p className="text-stone-gray text-sm mt-2 leading-relaxed relative z-10">{t('monetization.premiumChallengeDesc')}</p>
+
+                        <div className="mt-4 grid grid-cols-2 gap-4 border-t border-dashed border-gray-300 pt-4 relative z-10">
+                            <div>
+                                <span className="block text-[10px] font-bold uppercase text-stone-gray tracking-wider mb-1">{t('monetization.depositLabel')}</span>
+                                <span className="font-mono font-bold text-ink-black">₩10,000</span>
+                            </div>
+                            <div>
+                                <span className="block text-[10px] font-bold uppercase text-stone-gray tracking-wider mb-1">{t('monetization.prizePool')}</span>
+                                <span className="font-mono font-bold text-amber-600">₩1,450,000</span>
+                            </div>
+                        </div>
+
+                        <button className="w-full mt-5 py-3 border-2 border-ink-black bg-ink-black text-white font-display font-bold uppercase tracking-widest text-sm hover:bg-amber-accent hover:text-ink-black transition-colors flex items-center justify-center gap-2 relative z-10">
+                            {t('monetization.joinChallenge')}
+                            <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+
                 <div className="px-6 py-8">
                     <h3 className="font-display text-xl font-bold uppercase mb-6 flex items-center gap-2">
                         <span className="w-3 h-3 bg-amber-accent"></span>

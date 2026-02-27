@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function MenuPages({ page, onBack }) {
     const { t } = useTranslation();
+    const [leaderboardTab, setLeaderboardTab] = useState('local');
 
     const Header = ({ title }) => (
         <div className="px-6 pt-12 pb-6 border-b-2 border-ink-black bg-white sticky top-0 z-10 flex items-center gap-4">
@@ -74,15 +75,50 @@ export default function MenuPages({ page, onBack }) {
         return (
             <div className="bg-off-white text-ink-black min-h-screen flex flex-col pb-16">
                 <Header title={t('menuPages.friends.title')} />
+
+                {/* Leaderboard Tabs */}
+                <div className="flex border-b-2 border-ink-black bg-white">
+                    <button
+                        onClick={() => setLeaderboardTab('global')}
+                        className={`flex-1 py-3 text-sm font-bold uppercase ${leaderboardTab === 'global' ? 'bg-ink-black text-white' : 'text-stone-gray hover:bg-slate-100'}`}
+                    >
+                        {t('monetization.tabGlobal')}
+                    </button>
+                    <button
+                        onClick={() => setLeaderboardTab('friends')}
+                        className={`flex-1 py-3 text-sm font-bold uppercase border-l-2 border-ink-black ${leaderboardTab === 'friends' ? 'bg-ink-black text-white' : 'text-stone-gray hover:bg-slate-100'}`}
+                    >
+                        {t('monetization.tabFriends')}
+                    </button>
+                    <button
+                        onClick={() => setLeaderboardTab('local')}
+                        className={`flex-1 py-3 text-sm font-bold uppercase border-l-2 border-ink-black ${leaderboardTab === 'local' ? 'bg-ink-black text-white' : 'text-stone-gray hover:bg-slate-100'}`}
+                    >
+                        {t('monetization.tabLocal')}
+                    </button>
+                </div>
+
                 <div className="p-6 flex-1">
+                    {leaderboardTab === 'local' && (
+                        <div className="mb-6 p-4 border-2 border-amber-accent bg-amber-50">
+                            <div className="flex items-center gap-2 mb-2">
+                                <span className="material-symbols-outlined text-amber-500">storefront</span>
+                                <h4 className="font-bold uppercase text-amber-700 text-sm tracking-wider">{t('monetization.b2bSponsor')}</h4>
+                            </div>
+                            <p className="text-sm font-bold text-ink-black">{t('monetization.localReward')}</p>
+                        </div>
+                    )}
+
                     <button className="w-full py-4 mb-6 bg-amber-accent border-2 border-ink-black font-bold flex items-center justify-center gap-2 shadow-kinetic-sm hover:translate-y-[2px] hover:shadow-none transition-all">
                         <span className="material-symbols-outlined">person_add</span>
                         {t('menuPages.friends.invite')}
                     </button>
+
                     <div className="space-y-3">
-                        <div className="border-2 border-ink-black bg-white p-4 font-bold flex items-center justify-between shadow-kinetic-sm text-amber-600">
-                            <span>{t('menuPages.friends.rank1')}</span>
-                            <span className="material-symbols-outlined">workspace_premium</span>
+                        <div className="border-2 border-ink-black bg-white p-4 font-bold flex items-center justify-between shadow-kinetic-sm text-amber-600 relative overflow-hidden">
+                            {leaderboardTab === 'local' && <div className="absolute top-0 right-0 w-8 h-8 bg-amber-200 -z-0"></div>}
+                            <span className="relative z-10">{t('menuPages.friends.rank1')}</span>
+                            <span className="material-symbols-outlined relative z-10">workspace_premium</span>
                         </div>
                         <div className="border-2 border-ink-black bg-white p-4 font-bold flex items-center justify-between">
                             <span>{t('menuPages.friends.rank2')}</span>

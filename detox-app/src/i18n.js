@@ -163,6 +163,22 @@ const resources = {
                 "upgrade": "Upgrade to Premium",
                 "premiumDesc": "Support the developer and unlock exclusive guardian skins.",
                 "payWithPaypal": "Pay with PayPal (Mock)"
+            },
+            "monetization": {
+                "premiumChallengeTitle": "Weekend 4-Hour Detox",
+                "premiumChallengeDesc": "Deposit ₩10,000. Failures lose deposit, winners split the pot.",
+                "depositLabel": "Entry Deposit",
+                "prizePool": "Est. Prize Pool",
+                "joinChallenge": "Join Challenge",
+                "storeTitle": "Topping Store",
+                "storeDesc": "Customize your guardian. Some items require high Local Rank.",
+                "buyItem": "Purchase",
+                "lockedRank": "Requires Local Top 10%",
+                "tabGlobal": "Global",
+                "tabFriends": "Friends",
+                "tabLocal": "My Neighborhood",
+                "localReward": "Rank 1-10: 20% Off Joe's Cafe",
+                "b2bSponsor": "Sponsored by Local Businesses"
             }
         }
     },
@@ -327,6 +343,22 @@ const resources = {
                 "upgrade": "프리미엄 업그레이드",
                 "premiumDesc": "개발자를 후원하고 특별한 가디언 스킨을 잠금 해제하세요.",
                 "payWithPaypal": "PayPal로 결제하기 (모의)"
+            },
+            "monetization": {
+                "premiumChallengeTitle": "주말 4시간 딥 디톡스 챌린지",
+                "premiumChallengeDesc": "참가비 1만원. 실패 시 예치금 소멸, 성공한 사람들이 상금을 나누어 가집니다.",
+                "depositLabel": "참가 예치금",
+                "prizePool": "예상 총 상금",
+                "joinChallenge": "챌린지 참가하기",
+                "storeTitle": "토핑 스토어",
+                "storeDesc": "가디언을 꾸며보세요. 일부 아이템은 동네 상위 랭크가 필요합니다.",
+                "buyItem": "결제하기",
+                "lockedRank": "동네 상위 10% 전용",
+                "tabGlobal": "전국 단위",
+                "tabFriends": "친구",
+                "tabLocal": "우리 동네",
+                "localReward": "1~10위 보상: 동네 카페 20% 할인권",
+                "b2bSponsor": "지역 소상공인 후원 리더보드"
             }
         }
     }
